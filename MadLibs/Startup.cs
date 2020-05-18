@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MadLibs
+namespace MadLib
 {
     public class Startup
     {
@@ -27,13 +27,13 @@ namespace MadLibs
             {
                 routes.MapRoute(
                     name:"default",
-                    template:"{controller=home}/{action=Index}/{id?}")
-            })
+                    template:"{controller=home}/{action=Index}/{id?}");
+            });
 
-            app.Run(async (Context) =>
+            app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Uh oh")
-            })
+                await context.Response.WriteAsync("Uh oh");
+            });
         }
     }
 }

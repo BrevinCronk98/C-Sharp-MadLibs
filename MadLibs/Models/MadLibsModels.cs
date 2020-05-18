@@ -1,5 +1,5 @@
 
-namespace MadLibs.Models
+namespace MadLib.Models
 {
     public class MadLibs
     {
